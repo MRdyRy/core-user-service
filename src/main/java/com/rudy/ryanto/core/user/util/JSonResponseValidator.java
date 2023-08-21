@@ -18,7 +18,7 @@ public class JSonResponseValidator {
         if (null == o)
             throw new CoreUserServiceException(UserConstant.ERROR_DESCRIPTION.GENERAL_EXCEPTION);
 
-        if (RESPONSE_CODE.RC_SUCCESS != o.getStatusCode().value())
+        if (RESPONSE_CODE.RC_SUCCESS == o.getStatusCode().value())
             isValid = Boolean.TRUE;
 
         return isValid;
