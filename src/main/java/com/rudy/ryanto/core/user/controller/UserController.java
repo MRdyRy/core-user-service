@@ -20,7 +20,7 @@ public class UserController {
 
 
     @ResponseBody
-    @PostMapping(value = "/getById", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/operation", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public Object doProcessReq(@RequestBody UserCommonReq userCommonReq, HttpServletRequest servletRequest) {
         log.info("doProcessReq : {}", userCommonReq);
         Object result = null;
