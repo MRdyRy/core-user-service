@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @Service
 @Slf4j
+@SuppressWarnings("all")
 public class AuditTrailService {
 
     @Autowired
@@ -26,6 +27,9 @@ public class AuditTrailService {
     private String auditTopic;
     @Autowired
     private ObjectMapper objectMapper;
+
+    public AuditTrailService() {
+    }
 
     public void sendAuditData(UserCommonReq req, UserCommonRes res, String activity, HttpServletRequest request) {
       log.info("sending audit ");

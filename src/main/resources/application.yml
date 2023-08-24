@@ -1,0 +1,23 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: core-user-service
+
+host:
+  user:
+    management : core-user-management-service
+
+endpoint:
+  searchById : /v1/user/find
+  create: /v1/user/add
+  update: /v1/user/add
+
+eureka:
+  service-url:
+    defaultZone: http://localhost:8081/eureka
+
+info:
+  app:
+    name: ${spring.application.name}
