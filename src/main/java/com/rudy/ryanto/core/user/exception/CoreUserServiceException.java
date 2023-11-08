@@ -5,7 +5,6 @@ import lombok.*;
 @Data
 @NoArgsConstructor
 @Builder
-@AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 public class CoreUserServiceException extends RuntimeException{
 
