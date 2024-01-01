@@ -4,7 +4,28 @@ server:
 spring:
   application:
     name: core-user-service
+  kafka:
+    bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+    schema:
+      registry:
+        url:
+          key: schema.registry.url
+    producer:
+      acks: all
 
+
+kafka:
+  schema:
+    registry:
+      url: http://localhost:8081
+compression:
+  type: snappy
+
+
+redis:
+  host: localhost
+  password: rudyryanto
+  port: 6479
 host:
   user:
     management : core-user-management-service
@@ -15,8 +36,12 @@ endpoint:
   update: /v1/user/add
 
 eureka:
-  service-url:
-    defaultZone: http://localhost:8081/eureka
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+
+topic:
+  audit: audit-topic
 
 info:
   app:

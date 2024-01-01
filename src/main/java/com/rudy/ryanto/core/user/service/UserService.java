@@ -6,7 +6,6 @@ import com.rudy.ryanto.core.user.exception.CoreUserServiceException;
 import com.rudy.ryanto.core.user.util.UserConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;

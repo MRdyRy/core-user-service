@@ -53,20 +53,12 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.rudy.ryanto</groupId>
-			<artifactId>common-config</artifactId>
-			<version>${common-conf-version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-data-jpa</artifactId>
-				</exclusion>
-			</exclusions>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis-reactive</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.rudy.ryanto</groupId>
-			<artifactId>core-audit-service</artifactId>
-			<version>${version-audit}</version>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
